@@ -7,7 +7,7 @@ class Buttons extends React.Component {
     const { fetchImage, like, email } = this.props;
     return (
       <View>
-        <Button onPress={fetchImage} title="I want another!" />
+        <Button onPress={fetchImage} title="I want a dog!" />
         <Button onPress={like} title="I love it!" />
         <Button onPress={email} title="Share with mom"  />
       </View>
@@ -63,7 +63,7 @@ class Card extends React.Component {
     };
 
     fetch(`https://api:${apiKey}@api.mailgun.net/v3/sambalana.com/messages`, options)
-      .then((response) => { 
+      .then((response) => {
         return response.json();
       })
       .then((json) => {
